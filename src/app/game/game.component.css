@@ -1,0 +1,41 @@
+.game-control {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.game-state-control {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    
+}
+
+.block-control {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+
+.rotate-button {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 58px;
+}
+
+.button-down {
+    margin-top: 5px;
+}
+
+.button-left {
+    margin-left: 3px;
+}
+
+.player-points {
+    margin-left: 10px;
+}
+
