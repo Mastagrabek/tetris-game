@@ -1,0 +1,27 @@
+<tetris-core
+    #game
+    [class.black-and-white]="bw"
+    tileSize="20px"
+    (lineCleared)="onLineCleared()"
+    (gameOver)="onGameOver()"
+>
+</tetris-core>
+<div class="player-points">
+    <h4>Points: <span class="badge badge-primary">{{ points }}</span></h4>
+</div>
+<div class="game-control">
+    <div class="game-state-control">
+        <button class="btn btn-success" (click)="game.actionStart()">Start</button>
+        <button class="btn btn-warning button-down" (click)="game.actionStop()">Stop</button>
+        <button class=" btn btn-info button-down" (click)="game.actionReset()">Reset</button>
+        <button (click)="onCancelGame()" class="btn btn-danger button-down">Cancel</button>
+    </div>
+    <div class="block-control">
+        <button class="btn btn-primary" (click)="game.actionLeft()">Left</button>
+        <button class="btn btn-primary button-left" (click)="game.actionDown()">Down</button>
+        <button class="btn btn-primary button-left" (click)="game.actionRight()">Right</button>
+    </div>
+    <div class="rotate-button">
+        <button class="btn btn-primary" (click)="game.actionRotate()">Rotate</button>
+    </div>
+</div>
