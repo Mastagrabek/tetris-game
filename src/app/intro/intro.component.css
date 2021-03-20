@@ -1,0 +1,13 @@
+.intro-page-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.header{
+
+}
+
+.button-container {
+  margin-top: 15px;
+}

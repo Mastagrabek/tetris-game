@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
 import { GameComponent } from './game/game.component';
 import { Routes, RouterModule } from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
+import {PlayerService} from './services/player.service';
+import { PlayersListComponent } from './players-list/players-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: IntroComponent },
@@ -18,14 +21,16 @@ const appRoutes: Routes = [
     AppComponent,
     IntroComponent,
     GameComponent,
+    PlayersListComponent,
   ],
   imports: [
     BrowserModule,
     TetrisCoreModule,
     RouterModule.forRoot(appRoutes),
-    HotkeyModule.forRoot()
+    HotkeyModule.forRoot(),
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

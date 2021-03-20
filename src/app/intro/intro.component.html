@@ -1,1 +1,27 @@
-<button (click)="onPlay()">Play!</button>
+<div class="intro-page-container">
+  <div class="header">
+    <h4>TETRIS GAME</h4>
+    <p>Welcome to our game!!!</p>
+  </div>
+  <div class="form-header">
+    <h4>Register player and play!</h4>
+  </div>
+  <div class="form">
+    <form [formGroup]="playerForm">
+      <div class="form-group">
+        <label>Name:</label>
+        <input formControlName="name" type="text" class="form-control" placeholder="name">
+        <label>Email:</label>
+        <input formControlName="email" type="email" class="form-control" placeholder="email">
+        <div class="button-container">
+          <button (click)="addPlayer()" class="btn btn-primary">Verify and play</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div>
+    <app-players-list [players]="players"></app-players-list>
+  </div>
+</div>
+
+<pre>{{ playerForm.value | json }}</pre>
